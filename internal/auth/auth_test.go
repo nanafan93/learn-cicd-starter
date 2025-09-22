@@ -15,7 +15,7 @@ func TestGetAPIKey(t *testing.T) {
 		want    string
 		wantErr bool
 	}{
-		{"happy path", args{http.Header{"Authorization": []string{"ApiKey my-secret-key"}}}, "my-secret-wk", false},
+		{"happy path", args{http.Header{"Authorization": []string{"ApiKey my-secret-key"}}}, "my-secret-key", false},
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
